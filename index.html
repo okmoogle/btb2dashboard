@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="//unpkg.com/bootstrap@4/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <div id="filter" class="d-flex flex-column">
+            <button id="btn-apply" class="btn btn-lg btn-primary mt-auto mb-2 ml-1 mr-1">
+                APPLY
+            </button>
+        </div>
+        <div id="main-section">
+            <div class="upper-row">
+                <div class="d-flex">
+                    <div class="" id="overall-chart"></div>
+                    <div id="overall-result">
+                        <div>점검률 <span>80.5%</span></div>
+                        <div>준수율 <span>100%</span></div>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="d-flex flex-column" style="width: 33.3% !important">
+                        <div id="daily-chart"></div>
+                        <div id="daily-table"></div>
+                    </div>
+                    <div class="d-flex flex-column" style="width: 33.3% !important">
+                        <div id="weekly-chart"></div>
+                        <div id="weekly-table"></div>
+                    </div>
+                    <div class="d-flex flex-column" style="width: 33.3% !important">
+                        <div id="monthly-chart"></div>
+                        <div id="monthly-table"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="lower-row">
+                <div>
+                    트렌드 차트 그룹
+                </div>
+                <div>
+                    기준 로테이션
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src='//unpkg.com/jquery@3/dist/jquery.min.js'></script>
+    <script src='//unpkg.com/popper.js@1/dist/umd/popper.min.js'></script>
+    <script src='//unpkg.com/bootstrap@4/dist/js/bootstrap.min.js'></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="//d3js.org/d3.v4.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        $('#btn-apply').on('click', renderAllChart);
+    </script>
+</body>
+
+</html>
